@@ -19,10 +19,10 @@ This organization is where the software behind that service is built.
 
 | | Product | What it does | Status |
 | :-: | --- | --- | --- |
-| 🌍 | **[Website](https://www.mkglobal.me)** | Our public home in English and Arabic: services, supported platforms, the partner program, and a direct line to order. | <img alt="live" src="https://shieldcn.dev/badge/live-16a34a.svg?statusDot=true&amp;variant=branded&amp;size=sm" /> |
-| 🧭 | **Operations platform** | The system of record behind every order: customers and their balances, orders and shipments, purchases, invoices and payments, finance, warehouse receiving and printed documents. | <img alt="internal" src="https://shieldcn.dev/badge/internal-1a3057.svg?statusDot=true&amp;variant=branded&amp;size=sm" /> |
-| 🖥️ | **Staff dashboard** | The web app our team runs the business from every day, in English and Arabic. | <img alt="internal" src="https://shieldcn.dev/badge/internal-1a3057.svg?statusDot=true&amp;variant=branded&amp;size=sm" /> |
-| 📦 | **Customer portal** | A place for customers to follow their orders, packages and balance on their own. | <img alt="building" src="https://shieldcn.dev/badge/building-f97c0e.svg?statusDot=true&amp;variant=branded&amp;size=sm" /> |
+| 🌍 | **[Website](https://www.mkglobal.me)** | Our public home in English and Arabic: services, supported platforms, the partner program, and a direct line to order. | <img alt="live" src="https://shieldcn.dev/badge/live-16a34a.svg?statusDot=true&amp;variant=branded&amp;size=sm" height="22" /> |
+| 🧭 | **Operations platform** | The system of record behind every order: customers and their balances, orders and shipments, purchases, invoices and payments, finance, warehouse receiving and printed documents. | <img alt="internal" src="https://shieldcn.dev/badge/internal-1a3057.svg?statusDot=true&amp;variant=branded&amp;size=sm" height="22" /> |
+| 🖥️ | **Staff dashboard** | The web app our team runs the business from every day, in English and Arabic. | <img alt="internal" src="https://shieldcn.dev/badge/internal-1a3057.svg?statusDot=true&amp;variant=branded&amp;size=sm" height="22" /> |
+| 📦 | **Customer portal** | A place for customers to follow their orders, packages and balance on their own. | <img alt="building" src="https://shieldcn.dev/badge/building-f97c0e.svg?statusDot=true&amp;variant=branded&amp;size=sm" height="22" /> |
 
 ## How we build
 
