@@ -4,7 +4,7 @@
 </picture>
 
 <p align="center">
-  <a href="https://www.mkglobal.me"><img alt="Website" src="https://shieldcn.dev/badge/mkglobal.me/Visit%20the%20website-f97c0e.svg?logo=lu%3AGlobe&amp;size=default&amp;variant=branded" /></a> <a href="https://wa.me/96176023815"><img alt="WhatsApp" src="https://shieldcn.dev/badge/WhatsApp/Order%20now-25D366.svg?logo=whatsapp&amp;size=default&amp;variant=branded" /></a> <a href="mailto:contact@mkglobal.me"><img alt="Email" src="https://shieldcn.dev/badge/Email/contact%40mkglobal.me-1a3057.svg?logo=lu%3AMail&amp;size=default&amp;variant=branded" /></a> <img alt="Based in Lebanon" src="https://shieldcn.dev/badge/Based%20in/Lebanon-1a3057.svg?logo=lu%3AMapPin&amp;size=default&amp;variant=branded" />
+  <a href="https://www.mkglobal.me"><img alt="Website" src="https://shieldcn.dev/badge/mkglobal.me-Visit%20the%20website-f97c0e.svg?logo=lu%3AGlobe&amp;size=default&amp;variant=branded" /></a> <a href="https://wa.me/96176023815"><img alt="WhatsApp" src="https://shieldcn.dev/badge/WhatsApp-Order%20now-25D366.svg?logo=whatsapp&amp;size=default&amp;variant=branded" /></a> <a href="mailto:contact@mkglobal.me"><img alt="Email" src="https://shieldcn.dev/badge/Email-contact%40mkglobal.me-1a3057.svg?logo=lu%3AMail&amp;size=default&amp;variant=branded" /></a> <img alt="Based in Lebanon" src="https://shieldcn.dev/badge/Based%20in-Lebanon-1a3057.svg?logo=lu%3AMapPin&amp;size=default&amp;variant=branded" />
 </p>
 
 <p align="center"><b>Shop from anywhere. We handle the rest.</b></p>
@@ -19,10 +19,10 @@ This organization is where the software behind that service is built.
 
 | | Product | What it does | Status |
 | :-: | --- | --- | --- |
-| 🌍 | **[Website](https://www.mkglobal.me)** | Our public home in English and Arabic: services, supported platforms, the partner program, and a direct line to order. | <img alt="live" src="https://shieldcn.dev/badge/live-16a34a.svg?statusDot=true&amp;variant=branded&amp;size=xs" /> |
-| 🧭 | **Operations platform** | The system of record behind every order: customers and their balances, orders and shipments, purchases, invoices and payments, finance, warehouse receiving and printed documents. | <img alt="live, internal" src="https://shieldcn.dev/badge/live%2C%20internal-16a34a.svg?statusDot=true&amp;variant=branded&amp;size=xs" /> |
-| 🖥️ | **Staff dashboard** | The web app our team runs the business from every day, in English and Arabic. | <img alt="live, internal" src="https://shieldcn.dev/badge/live%2C%20internal-16a34a.svg?statusDot=true&amp;variant=branded&amp;size=xs" /> |
-| 📦 | **Customer portal** | A place for customers to follow their orders, packages and balance on their own. | <img alt="in development" src="https://shieldcn.dev/badge/in%20development-f97c0e.svg?statusDot=true&amp;variant=branded&amp;size=xs" /> |
+| 🌍 | **[Website](https://www.mkglobal.me)** | Our public home in English and Arabic: services, supported platforms, the partner program, and a direct line to order. | <img alt="live" src="https://shieldcn.dev/badge/live-16a34a.svg?statusDot=true&amp;variant=branded&amp;size=sm" /> |
+| 🧭 | **Operations platform** | The system of record behind every order: customers and their balances, orders and shipments, purchases, invoices and payments, finance, warehouse receiving and printed documents. | <img alt="live, internal" src="https://shieldcn.dev/badge/live%2C%20internal-16a34a.svg?statusDot=true&amp;variant=branded&amp;size=sm" /> |
+| 🖥️ | **Staff dashboard** | The web app our team runs the business from every day, in English and Arabic. | <img alt="live, internal" src="https://shieldcn.dev/badge/live%2C%20internal-16a34a.svg?statusDot=true&amp;variant=branded&amp;size=sm" /> |
+| 📦 | **Customer portal** | A place for customers to follow their orders, packages and balance on their own. | <img alt="in development" src="https://shieldcn.dev/badge/in%20development-f97c0e.svg?statusDot=true&amp;variant=branded&amp;size=sm" /> |
 
 ## How we build
 
