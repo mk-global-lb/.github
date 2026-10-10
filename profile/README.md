@@ -1,6 +1,6 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://shieldcn.dev/header/glow.svg?title=MK+Global&amp;subtitle=Shop+Global.+Ship+Smart.+Delivering+to+Lebanon.&amp;size=wide&amp;glow=f97c0e&amp;logo=https%3A%2F%2Fraw.githubusercontent.com%2Fmk-global-lb%2F.github%2Fmain%2Fprofile%2Fassets%2Fmk-logo-on-dark.png&amp;mode=dark&amp;gradient=0b1628%2C1a3057%2C135&amp;titleColor=ffffff&amp;subtitleColor=f9b46e" />
-  <img alt="MK Global: Shop Global. Ship Smart. Delivering to Lebanon." src="https://shieldcn.dev/header/glow.svg?title=MK+Global&amp;subtitle=Shop+Global.+Ship+Smart.+Delivering+to+Lebanon.&amp;size=wide&amp;glow=f97c0e&amp;logo=https%3A%2F%2Fraw.githubusercontent.com%2Fmk-global-lb%2F.github%2Fmain%2Fprofile%2Fassets%2Fmk-logo.png&amp;mode=light&amp;titleColor=1a3057&amp;subtitleColor=c2610a" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://shieldcn.dev/header/dots.svg?title=MK+Global&amp;subtitle=Shop+Global.+Ship+Smart.+Delivering+to+Lebanon.&amp;size=wide&amp;logo=https%3A%2F%2Fraw.githubusercontent.com%2Fmk-global-lb%2F.github%2Fmain%2Fprofile%2Fassets%2Fmk-logo-on-dark.png&amp;mode=dark&amp;bg=1a3057&amp;titleColor=ffffff&amp;subtitleColor=f9b46e" />
+  <img alt="MK Global: Shop Global. Ship Smart. Delivering to Lebanon." src="https://shieldcn.dev/header/dots.svg?title=MK+Global&amp;subtitle=Shop+Global.+Ship+Smart.+Delivering+to+Lebanon.&amp;size=wide&amp;logo=https%3A%2F%2Fraw.githubusercontent.com%2Fmk-global-lb%2F.github%2Fmain%2Fprofile%2Fassets%2Fmk-logo.png&amp;mode=light&amp;bg=ffffff&amp;titleColor=1a3057&amp;subtitleColor=c2610a" />
 </picture>
 
 <p align="center">
