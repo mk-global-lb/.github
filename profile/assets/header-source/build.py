@@ -36,6 +36,7 @@ THEMES = {
         "muted": "#5b6b85",
         "faint": "#d5dbe5",
         "meta": "#8c99ae",
+        "feeder": "#a3afc2",
         "accent": "#f07c10",
         "mark_navy": "#1a3057",
         "node_fill": "#ffffff",
@@ -47,6 +48,7 @@ THEMES = {
         "muted": "#a9b6cc",
         "faint": "#314a73",
         "meta": "#7d90b0",
+        "feeder": "#5d769f",
         "accent": "#f7892a",
         "mark_navy": "#ffffff",
         "node_fill": "#1a3057",
@@ -107,7 +109,10 @@ PLACES = {
     "DXB": (55.36, 25.25),
     "KSA": (46.70, 24.71),
 }
-MAP_X0, MAP_Y0, K = 1010, 118, 24.0
+MAP_X0, MAP_Y0, K = 930, 118, 22.0
+
+# Stores further away feed the Dubai hub from off the map, transit style: (code, line y).
+ORIGINS = (("CHN", 160), ("USA", 220), ("TUR", 280))
 
 
 def project(lon, lat):
@@ -119,8 +124,8 @@ def build(theme: str) -> str:
     parts = [
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" '
         f'role="img" aria-labelledby="title">',
-        "<title id=\"title\">MK Global. Shop Global. Deliver to Lebanon. By air from Dubai and by land from "
-        "Saudi Arabia, into Beirut and on to your door.</title>",
+        "<title id=\"title\">MK Global. Shop Global. Deliver to Lebanon. Orders from China, the United States "
+        "and Turkey, by air from Dubai and by land from Saudi Arabia, into Beirut and on to your door.</title>",
         f'<defs><clipPath id="card"><rect x="2" y="2" width="{W - 4}" height="{H - 4}" rx="21"/></clipPath></defs>',
         f'<rect x="1" y="1" width="{W - 2}" height="{H - 2}" rx="22" fill="{t["bg"]}" '
         f'stroke="{t["frame"]}" stroke-width="2"/>',
@@ -172,11 +177,16 @@ def build(theme: str) -> str:
         f'stroke-linecap="round" stroke-dasharray="1 14"/>'
     )
 
-    # Stubs off the edge of the map: orders arrive from stores around the world.
-    parts.append(
-        f'<line x1="{W}" y1="{dxb[1]:.1f}" x2="{dxb[0]:.1f}" y2="{dxb[1]:.1f}" stroke="{t["faint"]}" stroke-width="5"/>'
-        f'<line x1="{ksa[0]:.1f}" y1="{H}" x2="{ksa[0]:.1f}" y2="{ksa[1]:.1f}" stroke="{t["faint"]}" stroke-width="5"/>'
-    )
+    # Feeders: each origin runs in from the edge, then joins one 45 degree trunk into Dubai.
+    feeders = {}
+    for code, y in ORIGINS:
+        bend = (dxb[0] + (dxb[1] - y), y)
+        feeders[code] = [(W + 20, y), bend, dxb]
+        pts = " ".join(f"{px:.1f},{py:.1f}" for px, py in feeders[code])
+        parts.append(
+            f'<polyline points="{pts}" fill="none" stroke="{t["feeder"]}" stroke-width="4" '
+            f'stroke-linejoin="round"/>'
+        )
 
     # Nodes.
     for (x, y), color in ((dxb, t["accent"]), (ksa, t["ink"])):
@@ -197,6 +207,9 @@ def build(theme: str) -> str:
             parts.append(f'<path fill="{t["meta"]}" d="{d3}"/>')
 
     label("DXB", "BY AIR", dxb[0], dxb[1] + 46)
+    for code, y in ORIGINS:
+        d, _ = text("geistmono-700.ttf", code, 18, W - 40, y - 12, tracking=0.08, anchor="end")
+        parts.append(f'<path fill="{t["muted"]}" d="{d}"/>')
     label("KSA", "BY LAND", ksa[0] - 30, ksa[1] + 8, anchor="end")
     label("BEY", "TO YOUR DOOR", bey[0] - 42, bey[1] - 4, anchor="end", extra="33.89N 35.50E")
 
@@ -204,22 +217,22 @@ def build(theme: str) -> str:
     off = 100
     def shift(points):
         return " ".join(f"{x + off:.1f},{y + off:.1f}" for x, y in points)
-    air_motion = (
-        f"M{W + 20 + off},{dxb[1] + off:.1f} L{shift([dxb])} "
-        f"C{shift([c1])} {shift([c2])} {shift([bey])}"
-    )
-    land_motion = "M" + shift([(ksa[0], H + 20), *land])
+    def air_motion(code):
+        return f"M{shift(feeders[code])} C{shift([c1])} {shift([c2])} {shift([bey])}"
+    land_motion = "M" + shift(land)
     parts.append(
         "<style>@media (prefers-reduced-motion: reduce){.parcel{display:none}}</style>"
     )
-    for motion, color, dur, begin in ((air_motion, t["accent"], 5, 0), (land_motion, t["ink"], 7, 1.5)):
+    runs = [(air_motion(code), t["accent"], 7.5, i * 2.5) for i, (code, _) in enumerate(ORIGINS)]
+    runs.append((land_motion, t["ink"], 7, 1.2))
+    for motion, color, dur, begin in runs:
         parts.append(
             f'<g class="parcel" transform="translate({-off},{-off})">'
             f'<rect x="-8" y="-8" width="16" height="16" rx="3" fill="{color}">'
             f'<animateMotion dur="{dur}s" begin="{begin}s" repeatCount="indefinite" '
             f'keyPoints="0;1;1" keyTimes="0;0.8;1" calcMode="linear" path="{motion}"/>'
             f'<animate attributeName="opacity" dur="{dur}s" begin="{begin}s" repeatCount="indefinite" '
-            f'values="1;1;0;0" keyTimes="0;0.78;0.82;1"/>'
+            f'values="0;1;1;0;0" keyTimes="0;0.03;0.78;0.82;1"/>'
             "</rect></g>"
         )
 
